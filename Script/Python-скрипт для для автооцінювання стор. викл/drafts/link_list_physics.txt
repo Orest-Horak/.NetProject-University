@@ -1,0 +1,70 @@
+﻿ЯКІБЧУК Петро Миколайович	http://physics.lnu.edu.ua/employee/yakibchuk	декан	Фізичний факультет	Деканат
+ДЕМКІВ Тарас Михайлович	http://physics.lnu.edu.ua/employee/demkiv-t-m	заступник декана	Фізичний факультет	Деканат
+КОРОЛИШИН Андрій Володимирович	http://physics.lnu.edu.ua/employee/andrij-korolyshyn	заступник декана	Фізичний факультет	Деканат
+МЕЛЕХ Богдан Ярославович	http://physics.lnu.edu.ua/employee/meleh-bohdan-yaroslavovych	завідувач кафедри	Фізичний факультет	Кафедра астрофізики
+ВАВРУХ Маркіян Васильович	http://physics.lnu.edu.ua/employee/vavruh-markiyan-vasylovych	професор	Фізичний факультет	Кафедра астрофізики
+НОВОСЯДЛИЙ Богдан Степанович	http://physics.lnu.edu.ua/employee/novosyadlyj-bohdan-stepanovych	професор	Фізичний факультет	Кафедра астрофізики
+ГАВРИЛОВА Наталя Вікторівна	http://physics.lnu.edu.ua/employee/havrylova-natalya-viktorivna	доцент	Фізичний факультет	Кафедра астрофізики
+СМЕРЕЧИНСЬКИЙ Святослав Всеволодович	http://physics.lnu.edu.ua/employee/smerechynskyj-svyatoslav-vsevolodovych	доцент	Фізичний факультет	Кафедра астрофізики
+СТЕЛЬМАХ Оксана Миколаївна	http://physics.lnu.edu.ua/employee/stelmah-oksana-mykolajivna	доцент	Фізичний факультет	Кафедра астрофізики
+ТИШКО Нестор Любомирович	http://physics.lnu.edu.ua/employee/tyshko-nestor-lyubomyrovych	доцент	Фізичний факультет	Кафедра астрофізики
+КОШМАК Ігор Олександрович	http://physics.lnu.edu.ua/employee/koshmak-ihor-oleksandrovych	асистент	Фізичний факультет	Кафедра астрофізики
+ВОЛОШИНОВСЬКИЙ Анатолій Степанович	http://physics.lnu.edu.ua/employee/voloshynovskyj-anatolij-stepanovych	завідувач кафедри	Фізичний факультет	Кафедра експериментальної фізики
+РОМАНЮК Микола Олексійович	http://physics.lnu.edu.ua/employee/romanyuk-mykola-oleksijovych	професор	Фізичний факультет	Кафедра експериментальної фізики
+ФРАНІВ Андрій Васильович	http://physics.lnu.edu.ua/employee/franiv-andrij-vasylovych	професор	Фізичний факультет	Кафедра експериментальної фізики
+АПУНЕВИЧ Софія Володимирівна	http://physics.lnu.edu.ua/employee/andrijovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+БРЕЗВІН Руслан Степанович	http://physics.lnu.edu.ua/employee/brezvin-ruslan-stepanovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+ВІСТОВСЬКИЙ Віталій Володимирович	http://physics.lnu.edu.ua/employee/vistovskyj-vitalij-volodymyrovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+КУРЛЯК Василь Юрійович	http://physics.lnu.edu.ua/employee/kurlyak-vasyl-yurijovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+ПАШУК Ігор Петрович	http://physics.lnu.edu.ua/employee/pashuk-ihor-petrovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+ХАПКО Зінон Андрійович	http://physics.lnu.edu.ua/employee/hapko-zinon-andrijovych	доцент	Фізичний факультет	Кафедра експериментальної фізики
+ГАМЕРНИК Роман Васильович	http://physics.lnu.edu.ua/employee/hamernyk-roman-vasylovych	провідний науковий співробітник	Фізичний факультет	Кафедра експериментальної фізики
+МАЛИЙ Тарас Сергійович	http://physics.lnu.edu.ua/employee/malyj-taras-serhijovych	старший науковий співробітник	Фізичний факультет	Кафедра експериментальної фізики
+ЖИШКОВИЧ Андрій Володимирович	http://physics.lnu.edu.ua/employee/zhyshkovych-andrij-volodymyrovych	науковий співробітник	Фізичний факультет	Кафедра експериментальної фізики
+ГАЛЯТКІН Олександр Олександрович	http://physics.lnu.edu.ua/employee/halyatkin-o-o	молодший науковий співробітник	Фізичний факультет	Кафедра експериментальної фізики
+КАРПЛЮК Лідія-Дарія Теодорівна	http://physics.lnu.edu.ua/employee/karplyuk-lidiya-dariya-teodorivna	завідувач лабораторії	Фізичний факультет	Кафедра експериментальної фізики
+СТАДНИК Василь Йосифович	http://physics.lnu.edu.ua/employee/stadnyk-vasyl-josyfovych	завідувач кафедри	Фізичний факультет	Кафедра загальної фізики
+АНТОНЯК Олег Тарасович	http://physics.lnu.edu.ua/employee/antonyak-o-t	доцент	Фізичний факультет	Кафедра загальної фізики
+ДЕМКІВ Тарас Михайлович	http://physics.lnu.edu.ua/employee/demkiv-t-m	доцент	Фізичний факультет	Кафедра загальної фізики
+КОНОПЕЛЬНИК Оксана Ігорівна	http://physics.lnu.edu.ua/employee/konopelnyk-o-i	доцент	Фізичний факультет	Кафедра загальної фізики
+ФТОМИН Назар Євгенійович	http://physics.lnu.edu.ua/employee/ftomyn-n-e	доцент	Фізичний факультет	Кафедра загальної фізики
+ЧОРНОДОЛЬСЬКИЙ Ярослав Миколайович	http://physics.lnu.edu.ua/employee/chornodolskyj-yaroslav-mykolajovych	доцент	Фізичний факультет	Кафедра загальної фізики
+ГЛАДКА Наталія Костянтинівна	http://physics.lnu.edu.ua/employee/hladka-nataliya-kostyantynivna	завідувач лабораторії	Фізичний факультет	Кафедра загальної фізики
+НОВОСАД Ірина Степанівна	http://physics.lnu.edu.ua/employee/novosad-iryna-stepanivna	завідувач лабораторії	Фізичний факультет	Кафедра загальної фізики
+КУХАРСЬКА Леся Володимирівна	http://physics.lnu.edu.ua/employee/kuharska-lesya-volodymyrivna	провідний спеціаліст	Фізичний факультет	Кафедра загальної фізики
+РАДКОВСЬКА Оксана Володимирівна	http://physics.lnu.edu.ua/employee/radkovska-oksana-volodymyrivna	провідний спеціаліст	Фізичний факультет	Кафедра загальної фізики
+ТКАЧУК Володимир Михайлович	http://physics.lnu.edu.ua/employee/tkachuk-volodymyr-myhajlovych	в.о. завідувача кафедри	Фізичний факультет	Кафедра теоретичної фізики
+ВАКАРЧУК Іван Олександрович	http://physics.lnu.edu.ua/employee/vakarchuk-i-o	професор	Фізичний факультет	Кафедра теоретичної фізики
+РОВЕНЧАК Андрій Адамович	http://physics.lnu.edu.ua/employee/rovenchak-a-a	професор	Фізичний факультет	Кафедра теоретичної фізики
+ГНАТЕНКО Христина Павлівна	http://physics.lnu.edu.ua/employee/hnatenko-h-p	доцент	Фізичний факультет	Кафедра теоретичної фізики
+МИГАЛЬ Василь Михайлович	http://physics.lnu.edu.ua/employee/myhal-v-m	доцент	Фізичний факультет	Кафедра теоретичної фізики
+ПАСТУХОВ Володимир Степанович	http://physics.lnu.edu.ua/employee/pastuhov-v-s	доцент	Фізичний факультет	Кафедра теоретичної фізики
+ПІХ Світлана Семенівна	http://physics.lnu.edu.ua/employee/pih-s-s	доцент	Фізичний факультет	Кафедра теоретичної фізики
+СТЕЦКО Микола Миколайович	http://physics.lnu.edu.ua/employee/stetsko-m-m	доцент	Фізичний факультет	Кафедра теоретичної фізики
+КРИНИЦЬКИЙ Юрій Степанович	http://physics.lnu.edu.ua/employee/krynytskyj-yu-s	старший викладач	Фізичний факультет	Кафедра теоретичної фізики
+ГРИГОРЧАК Орест Іванович	http://physics.lnu.edu.ua/employee/hryhorchak-o-i	асистент	Фізичний факультет	Кафедра теоретичної фізики
+САМАР Микола Іванович	http://physics.lnu.edu.ua/employee/samar-m-i	асистент	Фізичний факультет	Кафедра теоретичної фізики
+КУЗЬМАК Андрій Романович	http://physics.lnu.edu.ua/employee/kuzmak-a-r	науковий співробітник	Фізичний факультет	Кафедра теоретичної фізики
+МУДРИЙ Степан Іванович	http://physics.lnu.edu.ua/employee/mudryj-stepan-ivanovych	завідувач кафедри	Фізичний факультет	Кафедра фізики металів
+МИКОЛАЙЧУК Олексій Гордійович	http://physics.lnu.edu.ua/employee/mykolaychuk	професор	Фізичний факультет	Кафедра фізики металів
+ПЛЕВАЧУК Юрій Олександрович	http://physics.lnu.edu.ua/employee/plevachuk-yu-o	професор <span class='part'>(сумісник)</span>	Фізичний факультет	Кафедра фізики металів
+ЩЕРБА Іван Дмитрович	http://physics.lnu.edu.ua/employee/scherba	професор	Фізичний факультет	Кафедра фізики металів
+ЯКІБЧУК Петро Миколайович	http://physics.lnu.edu.ua/employee/yakibchuk	професор <span class='part'>(сумісник)</span>	Фізичний факультет	Кафедра фізики металів
+КОРОЛИШИН Андрій Володимирович	http://physics.lnu.edu.ua/employee/andrij-korolyshyn	доцент	Фізичний факультет	Кафедра фізики металів
+ШТАБЛАВИЙ Ігор Іванович	http://physics.lnu.edu.ua/employee/shtablavyj-i-i	доцент	Фізичний факультет	Кафедра фізики металів
+БІЛИК Роман Миколайович	http://physics.lnu.edu.ua/employee/bilyk	асистент	Фізичний факультет	Кафедра фізики металів
+ПРИСЯЖНЮК Віктор Іванович	http://physics.lnu.edu.ua/employee/prysyazhnyuk	асистент	Фізичний факультет	Кафедра фізики металів
+СКЛЯРЧУК Василь Михайлович	http://physics.lnu.edu.ua/employee/sklyarchuk-v-m	головний науковий співробітник	Фізичний факультет	Кафедра фізики металів
+ЯКИМОВИЧ Андрій Степанович	http://physics.lnu.edu.ua/employee/yakymovych-a-s	старший науковий співробітник	Фізичний факультет	Кафедра фізики металів
+НИКИРУЙ Юлія Семенівна	http://physics.lnu.edu.ua/employee/nykyruj-yu-s	науковий співробітник	Фізичний факультет	Кафедра фізики металів
+ЛЮДКЕВИЧ Уляна Іванівна	http://physics.lnu.edu.ua/employee/lyudkevych-u-i	молодший науковий співробітник	Фізичний факультет	Кафедра фізики металів
+ДОБРЯНСЬКА Леся Орестівна	http://physics.lnu.edu.ua/employee/dobryanska	провідний спеціаліст	Фізичний факультет	Кафедра фізики металів
+КУЛИК Юрій Орестович	http://physics.lnu.edu.ua/employee/kulyk-yu-o	провідний спеціаліст, асистент <span class='part'>(сумісник)</span>	Фізичний факультет	Кафедра фізики металів
+КАПУСТЯНИК Володимир Богданович	http://physics.lnu.edu.ua/employee/kapustyanyk-volodymyr-bohdanovych	завідувач кафедри	Фізичний факультет	Кафедра фізики твердого тіла
+БОВГИРА Олег Вікторович	http://physics.lnu.edu.ua/employee/bovhyra-oleh-viktorovych	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+ЕЛІЯШЕВСЬКИЙ Юрій Ігорович	http://physics.lnu.edu.ua/employee/eliyashevskyj-yurij-ihorovych	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+КУЛИК Богдан Ярославович	http://physics.lnu.edu.ua/employee/kulyk-bohdan-yaroslavovych	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+ПОПЕЛЬ Олександр Михайлович	http://physics.lnu.edu.ua/employee/popel-oleksandr-myhajlovych	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+ТУЗЯК Оксана Ярославівна	http://physics.lnu.edu.ua/employee/tuzyak-oksana-yaroslavivna	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+ТУРКО Борис Ігорович	http://physics.lnu.edu.ua/employee/turko-b-i	доцент	Фізичний факультет	Кафедра фізики твердого тіла
+СЕРКІЗ Роман Ярославович	http://physics.lnu.edu.ua/employee/serkiz-r-ya	завідувач лабораторії	Фізичний факультет	Кафедра фізики твердого тіла

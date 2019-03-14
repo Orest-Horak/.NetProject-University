@@ -1,0 +1,71 @@
+ПIБ	Посада	Науковий ступінь	Вчене звання	Телефон(робочий, мобільний)	Електронна пошта	Профіль у Google Scholar	Профіль у Academia.edu	Профіль у Facebook	Профіль у LinkedIn	Веб-сторінка	Чи є список курсів?	Чи вказані наукові інтереси?	Чи наведена біографія?	Кількість наведених публікацій	Кількість гіперпосилань у списку публікацій
+Якібчук Петро Миколайович	декан фізичного факультету, професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	73	0	
+Демків Тарас Михайлович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	13	0	
+Королишин Андрій Володимирович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Мелех Богдан Ярославович	завідувач кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	12	0	
+Ваврух Маркіян Васильович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	25	0	
+Новосядлий Богдан Степанович	професор 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Гаврилова Наталя Вікторівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	5	0	
+Смеречинський Святослав Всеволодович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	9	0	
+Стельмах Оксана Миколаївна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	8	0	
+Тишко Нестор Любомирович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	4	0	
+Кошмак Ігор Олександрович	асистент 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Волошиновський Анатолій Степанович	завідувач кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	26	0	
+Романюк Микола Олексійович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	22	0	
+Франів Андрій Васильович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	32	0	
+Апуневич  Софія   Володимирівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	12	0	
+Брезвін Руслан Степанович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	10	0	
+Вістовський Віталій  Володимирович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	15	0	
+Курляк Василь Юрійович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	14	0	
+Пашук  Ігор Петрович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	9	0	
+Хапко Зінон Андрійович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	7	0	
+Гамерник  Роман  Васильович	провідний науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	33	0	
+Малий  Тарас  Сергійович	старший науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Жишкович Андрій  Володимирович	науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Галяткін Олександр Олександрович	молодший науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	5	0	
+Карплюк Лідія-Дарія Теодорівна	завідувач лабораторії 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Стадник Василь Йосифович	завідувач кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	15	15	
+Антоняк Олег Тарасович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	9	7	
+Демків Тарас Михайлович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	13	0	
+Конопельник Оксана Ігорівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	8	0	
+Фтомин Назар Євгенійович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	5	5	
+Чорнодольський Ярослав Миколайович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	8	8	
+Гладка Наталія Костянтинівна	завідувач лабораторії 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Новосад Ірина Степанівна	завідувач лабораторії 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	9	0	
+Кухарська Леся Володимирівна	провідний спеціаліст 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Радковська Оксана Володимирівна	провідний спеціаліст 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Ткачук Володимир Михайлович	в.о. завідувача кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	4	4	
+Вакарчук Іван Олександрович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Ровенчак Андрій Адамович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	4	2	
+Гнатенко Христина Павлівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Мигаль Василь Михайлович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Пастухов Володимир Степанович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Піх Світлана Семенівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	TRUE	0	1	
+Стецко Микола Миколайович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Криницький Юрій Степанович	старший викладач 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Григорчак Орест Іванович	асистент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Самар Микола Іванович	асистент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Кузьмак Андрій Романович	науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	0	1	
+Мудрий Степан Іванович	завідувач кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	17	8	
+Миколайчук Олексій Гордійович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	21	16	
+Плевачук Юрій Олександрович	Начальник НДЧ, професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	142	6	
+Щерба Іван Дмитрович	професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	38	12	
+Якібчук Петро Миколайович	декан фізичного факультету, професор 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	73	0	
+Королишин Андрій Володимирович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Штаблавий Ігор Іванович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	43	22	
+Білик Роман Миколайович	асистент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	5	3	
+Присяжнюк Віктор Іванович	асистент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	53	53	
+Склярчук Василь Михайлович	головний науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	109	5	
+Якимович Андрій Степанович	старший науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Никируй Юлія Семенівна	науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	FALSE	12	1	
+Людкевич Уляна Іванівна	молодший науковий співробітник 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	7	0	
+Добрянська Леся Орестівна	провідний спеціаліст 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	15	0	
+Кулик Юрій Орестович	провідний спеціаліст 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	55	26	
+Капустяник Володимир Богданович	завідувач кафедри 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	25	22	
+Бовгира Олег Вікторович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	30	28	
+Еліяшевський Юрій Ігорович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	FALSE	FALSE	0	0	
+Кулик Богдан Ярославович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	41	37	
+Попель Олександр Михайлович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	3	0	
+Тузяк Оксана Ярославівна	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	12	8	
+Турко Борис Ігорович	доцент 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	31	30	
+Серкіз Роман Ярославович	завідувач лабораторії 	None	None	None	None	None	None	None	None	None	FALSE	TRUE	TRUE	19	19	
