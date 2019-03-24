@@ -1,0 +1,1 @@
+<article class='content employee'><h1 class='page-title'>Roman Mytsuk</h1><section class='general'><div class='info'><p><span class='label'>Position<span>:</span></span> <span class='value'>Laboratory Chief Manager, <a href='http://chem.lnu.edu.ua/en/department/department-of-analytical-chemistry'>Department of Analytical Chemistry</a></span></p></div></section></article>

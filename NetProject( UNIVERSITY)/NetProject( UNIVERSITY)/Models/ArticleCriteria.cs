@@ -1,8 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using System.Text;
+
 
 namespace NetProject__UNIVERSITY_.Models
 {
@@ -35,5 +39,57 @@ namespace NetProject__UNIVERSITY_.Models
             }
         }
 
+        //Extracts the links from the file.
+        public List<string> ExtractLinks(string filename)
+        {
+            List<string> links = new List<string>();
+
+
+
+            using (FileStream fs = File.OpenRead("input.txt"))
+            {
+                using (StreamReader streamReader = new StreamReader(fs, Encoding.UTF8))
+                {
+                    while (!streamReader.EndOfStream)
+                    {
+                        string line = streamReader.ReadLine();
+                        string link1 = line.Trim();
+                        if (link1[0] == '\ufeff')
+                        {
+                            link1 = link1.Substring(1);
+                            
+                        }
+                        links.Append(link1);
+                    }
+
+                }
+            }
+            return links;
+
+
+        }
+
+
+        /*
+        private void run_cmd(string cmd, string args)
+        {
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = "D:/LNU/3 course/2 сем/.net Project/Script/Python-скрипт (новини ф-тів)/scraper.py";
+            start.Arguments = string.Format("{0} {1}", cmd, args);
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            using (Process process = Process.Start(start))
+            {
+                using (StreamReader reader = process.StandardOutput)
+                {
+                    string result = reader.ReadToEnd();
+                    Console.Write(result);
+                }
+            }
+        }
+    */
+
+
     }
 }
+
