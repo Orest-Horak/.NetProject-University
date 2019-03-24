@@ -1,12 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
+using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
-using System.Text;
-
 
 namespace NetProject__UNIVERSITY_.Models
 {
@@ -39,57 +36,70 @@ namespace NetProject__UNIVERSITY_.Models
             }
         }
 
-        //Extracts the links from the file.
-        public List<string> ExtractLinks(string filename)
+
+        private string GetFaculty(string facultyLink)
         {
-            List<string> links = new List<string>();
+            return facultyLink.Split('.')[0].Split('/').Last();
+        }
 
+        public List<ArticleCriteria> CollectNewsInfo(string link, DateTime fromDate)
+        {
+            string faculty = GetFaculty(link);
+            List<ArticleCriteria> articleList = new List<ArticleCriteria>();
 
-
-            using (FileStream fs = File.OpenRead("input.txt"))
+            bool keepGoing = true;
+            int pageNumber = 1;
+            while (keepGoing)
             {
-                using (StreamReader streamReader = new StreamReader(fs, Encoding.UTF8))
+                string pageLink;
+                if (pageNumber == 1)
                 {
-                    while (!streamReader.EndOfStream)
+                    pageLink = link;
+                }
+                else
+                {
+                    pageLink = link + "/page/" + pageNumber.ToString();
+                }
+
+                HtmlWeb web = new HtmlWeb();
+                var res = web.Load(link);
+
+                if (res != null)
+                {
+                    // list of raw html fragments <article>(.*?)</article>
+                    var articlesRaw = res.DocumentNode.SelectNodes("//article//div[@class='excerpt']//a[@class='read-more']");
+                    foreach (var articleRaw in articlesRaw)
                     {
-                        string line = streamReader.ReadLine();
-                        string link1 = line.Trim();
-                        if (link1[0] == '\ufeff')
+                        var article = new ArticleCriteria(articleRaw, pageNumber, faculty);
+                        try
                         {
-                            link1 = link1.Substring(1);
-                            
+                            if (article.Date >= fromDate)
+                            {
+                                articleList.Append(article);
+                            }
+                            else
+                            {
+                                //stop
+                                keepGoing = false;
+                                break;
+                            }
                         }
-                        links.Append(link1);
+                        catch (Exception e)
+                        {
+                            articleList.Append(article);
+                        }
                     }
 
+                    pageNumber += 1;
                 }
-            }
-            return links;
-
-
-        }
-
-
-        /*
-        private void run_cmd(string cmd, string args)
-        {
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = "D:/LNU/3 course/2 сем/.net Project/Script/Python-скрипт (новини ф-тів)/scraper.py";
-            start.Arguments = string.Format("{0} {1}", cmd, args);
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            using (Process process = Process.Start(start))
-            {
-                using (StreamReader reader = process.StandardOutput)
+                else
                 {
-                    string result = reader.ReadToEnd();
-                    Console.Write(result);
+                    keepGoing = false;
                 }
-            }
-        }
-    */
 
+            }
+            return articleList;
+        }
 
     }
 }
-
