@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Text;
 
-
 namespace NetProject__UNIVERSITY_.Models
 {
     public class ArticleCriteria
@@ -44,9 +43,7 @@ namespace NetProject__UNIVERSITY_.Models
         public List<string> ExtractLinks(string filename)
         {
             List<string> links = new List<string>();
-
-
-
+ 
             using (FileStream fs = File.OpenRead("input.txt"))
             {
                 using (StreamReader streamReader = new StreamReader(fs, Encoding.UTF8))
@@ -58,49 +55,25 @@ namespace NetProject__UNIVERSITY_.Models
                         if (link1[0] == '\ufeff')
                         {
                             link1 = link1.Substring(1);
-                            
+
                         }
                         links.Append(link1);
                     }
-
                 }
             }
             return links;
-
-
         }
+
         public void dump_news_info(StreamWriter  f, ArticleCriteria link)
         {
 
-            string info_line = string.Format("\t{0}{1}{2}\n", link,(article_list.Count).ToString(), article_list[0].date_text);
+            string info_line = string.Format("\t{0}{1}{2}\n", link,(article_list.Count).ToString(), article_list[0].DateFormat);
             f.WriteLine(info_line);
             foreach (var article in article_list)
             {
-                info_line = string.Format("\t{0}{1}{2}{3}\n", article.date_text, article.faculty,(article.page).ToString(), article.link);
+                info_line = string.Format("\t{0}{1}{2}{3}\n", article.DateFormat, article.Faculty, (article.PageNumber).ToString(), article.Link);
                 f.WriteLine(info_line);
             }
         }
-
-        /*
-        private void run_cmd(string cmd, string args)
-        {
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = "D:/LNU/3 course/2 сем/.net Project/Script/Python-скрипт (новини ф-тів)/scraper.py";
-            start.Arguments = string.Format("{0} {1}", cmd, args);
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            using (Process process = Process.Start(start))
-            {
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    string result = reader.ReadToEnd();
-                    Console.Write(result);
-                }
-            }
-        }
-    */
-
-
     }
 }
-
