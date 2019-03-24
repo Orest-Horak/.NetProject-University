@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,6 @@ namespace NetProject__UNIVERSITY_.Models
 {
     public class ArticleCriteria
     {
-        List<ArticleCriteria> article_list = new List<ArticleCriteria>();
         public string DateFormat { get; set; }
         public DateTime Date { get; set; }
         public string Link { get; set; }
@@ -27,11 +27,22 @@ namespace NetProject__UNIVERSITY_.Models
             this.Faculty = faculty;
             try
             {
-                this.DateFormat = articleRaw.SelectNodes("//div[@class='meta']").First().InnerText.Remove(11).Trim();
+                //semiworking         
+                //this.DateFormat = articleRaw.SelectSingleNode("//div[@class='meta']").InnerText.Remove(11).Trim();
+                //this.Date = DateTime.Parse(DateFormat);
+                //this.Link = articleRaw.Attributes["href"].Value.Trim();
+
+
                 //string[] stringDate = DateFormat.Split(new char[] { '.' });
                 //int day = Int32.Parse(stringDate[0]), month = Int32.Parse(stringDate[1]), year = Int32.Parse(stringDate[2]);
+                HtmlNode dataNode = articleRaw.ChildNodes["header"].ChildNodes["div"];
+                this.DateFormat = dataNode.InnerText.Remove(11).Trim();
                 this.Date = DateTime.Parse(DateFormat);
-                this.Link = articleRaw.SelectNodes("//div[@class='excerpt']//a[@class='read-more']").First().Attributes["href"].Value.Trim();
+                this.Link = articleRaw.SelectSingleNode("div[@class='excerpt']//a[@class='read-more']").Attributes["href"].Value.Trim();
+
+                //div[@class='excerpt']//a[@class='read-more']
+
+
             }
             catch (Exception e)
             {
@@ -43,8 +54,8 @@ namespace NetProject__UNIVERSITY_.Models
         public List<string> ExtractLinks(string filename)
         {
             List<string> links = new List<string>();
- 
-            using (FileStream fs = File.OpenRead("input.txt"))
+
+            using (FileStream fs = File.OpenRead(filename))
             {
                 using (StreamReader streamReader = new StreamReader(fs, Encoding.UTF8))
                 {
@@ -57,14 +68,25 @@ namespace NetProject__UNIVERSITY_.Models
                             link1 = link1.Substring(1);
 
                         }
-                        links.Append(link1);
+                        links.Add(link1);
                     }
                 }
             }
             return links;
         }
-        
-          private string GetFaculty(string facultyLink)
+
+        public void dump_news_info(StreamWriter f, string link, List<ArticleCriteria> articleList)
+        {
+            string info_line = string.Format("{0}\t{1}\t{2}\n", link, (articleList.Count).ToString(), articleList[0].DateFormat);
+            f.WriteLine(info_line);
+            foreach (var article in articleList)
+            {
+                info_line = string.Format("{0}\t{1}\t{2}\t{3}\n", article.Date.ToString("u"), article.Faculty, (article.PageNumber).ToString(), article.Link);
+                f.WriteLine(info_line);
+            }
+        }
+
+        private string GetFaculty(string facultyLink)
         {
             return facultyLink.Split('.')[0].Split('/').Last();
         }
@@ -89,12 +111,12 @@ namespace NetProject__UNIVERSITY_.Models
                 }
 
                 HtmlWeb web = new HtmlWeb();
-                var res = web.Load(link);
+                var res = web.Load(pageLink);
 
                 if (res != null)
                 {
                     // list of raw html fragments <article>(.*?)</article>
-                    var articlesRaw = res.DocumentNode.SelectNodes("//article//div[@class='excerpt']//a[@class='read-more']");
+                    var articlesRaw = res.DocumentNode.SelectNodes("//article");
                     foreach (var articleRaw in articlesRaw)
                     {
                         var article = new ArticleCriteria(articleRaw, pageNumber, faculty);
@@ -102,7 +124,7 @@ namespace NetProject__UNIVERSITY_.Models
                         {
                             if (article.Date >= fromDate)
                             {
-                                articleList.Append(article);
+                                articleList.Add(article);
                             }
                             else
                             {
@@ -113,10 +135,9 @@ namespace NetProject__UNIVERSITY_.Models
                         }
                         catch (Exception e)
                         {
-                            articleList.Append(article);
+                            articleList.Add(article);
                         }
                     }
-
                     pageNumber += 1;
                 }
                 else
@@ -128,16 +149,26 @@ namespace NetProject__UNIVERSITY_.Models
             return articleList;
         }
 
-        public void dump_news_info(StreamWriter  f, ArticleCriteria link)
+        public void MainFunction(DateTime fromDate)
         {
+            // посиланння на розділи "Новини" різних факультетів
+            string filenameRead = @"Data\link_list.txt";
 
-            string info_line = string.Format("\t{0}{1}{2}\n", link,(article_list.Count).ToString(), article_list[0].DateFormat);
-            f.WriteLine(info_line);
-            foreach (var article in article_list)
+            List<string> links = ExtractLinks(filenameRead);
+
+            string filenameWrite = ("report" + DateTime.Today.ToString("u") + ".txt").Replace(':', '.');
+
+            using (StreamWriter f = new StreamWriter(filenameWrite, false))
             {
-                info_line = string.Format("\t{0}{1}{2}{3}\n", article.DateFormat, article.Faculty, (article.PageNumber).ToString(), article.Link);
-                f.WriteLine(info_line);
+                f.WriteLine(string.Format("ФАКУЛЬТЕТ \t КІЛЬКІСТЬ НОВИН ВІД {0} \t ДАТА ОСТАННЬОЇ ПУБЛІКАЦІЇ", fromDate.Date.ToString("dd.MM.yyyy")));
+                foreach (string link in links)
+                {
+                    List<ArticleCriteria> articleList = CollectNewsInfo(link, fromDate);
+                    dump_news_info(f, link, articleList);
+                }
             }
+
+
         }
     }
 }
