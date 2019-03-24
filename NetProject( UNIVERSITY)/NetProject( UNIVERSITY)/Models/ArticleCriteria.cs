@@ -63,6 +63,70 @@ namespace NetProject__UNIVERSITY_.Models
             }
             return links;
         }
+        
+          private string GetFaculty(string facultyLink)
+        {
+            return facultyLink.Split('.')[0].Split('/').Last();
+        }
+
+        public List<ArticleCriteria> CollectNewsInfo(string link, DateTime fromDate)
+        {
+            string faculty = GetFaculty(link);
+            List<ArticleCriteria> articleList = new List<ArticleCriteria>();
+
+            bool keepGoing = true;
+            int pageNumber = 1;
+            while (keepGoing)
+            {
+                string pageLink;
+                if (pageNumber == 1)
+                {
+                    pageLink = link;
+                }
+                else
+                {
+                    pageLink = link + "/page/" + pageNumber.ToString();
+                }
+
+                HtmlWeb web = new HtmlWeb();
+                var res = web.Load(link);
+
+                if (res != null)
+                {
+                    // list of raw html fragments <article>(.*?)</article>
+                    var articlesRaw = res.DocumentNode.SelectNodes("//article//div[@class='excerpt']//a[@class='read-more']");
+                    foreach (var articleRaw in articlesRaw)
+                    {
+                        var article = new ArticleCriteria(articleRaw, pageNumber, faculty);
+                        try
+                        {
+                            if (article.Date >= fromDate)
+                            {
+                                articleList.Append(article);
+                            }
+                            else
+                            {
+                                //stop
+                                keepGoing = false;
+                                break;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            articleList.Append(article);
+                        }
+                    }
+
+                    pageNumber += 1;
+                }
+                else
+                {
+                    keepGoing = false;
+                }
+
+            }
+            return articleList;
+        }
 
         public void dump_news_info(StreamWriter  f, ArticleCriteria link)
         {
