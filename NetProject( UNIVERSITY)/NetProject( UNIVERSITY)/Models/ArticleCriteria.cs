@@ -86,7 +86,7 @@ namespace NetProject__UNIVERSITY_.Models
             }
         }
 
-        private string GetFaculty(string facultyLink)
+        public static string GetFaculty(string facultyLink)
         {
             return facultyLink.Split('.')[0].Split('/').Last();
         }
