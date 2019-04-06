@@ -126,5 +126,23 @@ namespace NetProject__UNIVERSITY_.Models
             var articleNodes = article.SelectNodes(articleAttribute + article_link);         
             return articleNodes;
         }
+        
+        public double GetDepartmentMark(HtmlNodeCollection departmentArticles, HtmlNodeCollection filterArticles, HtmlNodeCollection mainArticles)
+        {
+            int result = 1;
+
+            if(filterArticles.Count()>=1 && departmentArticles.Count()>0)
+            {
+                result = 2;
+            }
+
+            else if(filterArticles.Count() <= 0 && departmentArticles.Count() == 0)
+            {
+                result = 0;
+            }
+
+
+            return result;
+        }
     }
 }
