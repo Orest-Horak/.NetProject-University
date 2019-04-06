@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,20 +21,23 @@ namespace NetProject__UNIVERSITY_.Models
             this.FacultyName = ArticleCriteria.GetFaculty(link);
 
             this.ArticleNumber = (articleList.Count);
-            
-            this.LastArticleDate = articleList[0].Date;
+
+            this.LastArticleDate = articleList.Max(a => a.Date);
         }
 
         public double CalculateFacultyMark(string link, List<ArticleCriteria> articleList)
         {
             double result;
-           
-                result = Math.Min(4, (4 * (ArticleNumber / 180)));
-            if (DateTime.Now.Day - LastArticleDate.Day > 14)
+
+            result = Math.Min(4.0, (4.0 * (ArticleNumber / 180.0)));
+
+            if ((DateTime.Now - LastArticleDate).Days > 14)
             {
-                result = result /2.0;
+                result = result / 2.0;
             }
+
             return result;
         }
     }
 }
+
