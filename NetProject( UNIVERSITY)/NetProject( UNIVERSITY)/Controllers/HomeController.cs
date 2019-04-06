@@ -27,7 +27,12 @@ namespace NetProject__UNIVERSITY_.Controllers
 
             var htmlNodes = htmlDoc.DocumentNode.SelectNodes("//article//div[@class='excerpt']//a[@class='read-more']").First();
 
-
+             /*
+              var html = @"http://bioweb.lnu.edu.ua/department/biophysics-and-bioinformatics";
+              
+            var test_res = ArticleDepartmentCriteria.ExtractArticles(htmlDoc.DocumentNode,"//body//div[@class='content news']");
+            var test_res = ArticleDepartmentCriteria.ExtractArticles(htmlDoc.DocumentNode, "//body//div//div//section");
+            */
 
 
             ArticleCriteria test = new ArticleCriteria(null, 0, "");
