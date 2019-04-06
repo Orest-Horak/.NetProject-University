@@ -1,0 +1,1 @@
+<article class='content employee'><h1 class='page-title'>Lidiya Karplyuk</h1><section class='general'><div class='info'><div><span class='label'>Position<span>:</span></span> <span class='value'>Laboratory Chief Manager, <br><a href='http://physics.lnu.edu.ua/en/department/kafedra-eksperymentalnoji-fizyky'>Experimental Physics Department</a></div></p></div></section></article>
