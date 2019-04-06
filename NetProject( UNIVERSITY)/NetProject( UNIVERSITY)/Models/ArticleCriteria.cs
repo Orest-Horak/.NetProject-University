@@ -77,12 +77,37 @@ namespace NetProject__UNIVERSITY_.Models
 
         public void dump_news_info(StreamWriter f, string link, List<ArticleCriteria> articleList)
         {
-            string info_line = string.Format("{0}\t{1}\t{2}\n", link, (articleList.Count).ToString(), articleList[0].DateFormat);
-            f.WriteLine(info_line);
-            foreach (var article in articleList)
+            try
             {
-                info_line = string.Format("{0}\t{1}\t{2}\t{3}\n", article.Date.ToString("u"), article.Faculty, (article.PageNumber).ToString(), article.Link);
+                string info_line = string.Format("{0}\t{1}\t{2}\n", link, articleList.Count.ToString(), articleList.Max(a => a.Date));
                 f.WriteLine(info_line);
+                foreach (var article in articleList)
+                {
+                    info_line = string.Format("{0}\t{1}\t{2}\t{3}\n", article.Date.ToString("u"), article.Faculty, (article.PageNumber).ToString(), article.Link);
+                    f.WriteLine(info_line);
+                }
+            }
+            catch (Exception e)
+            {
+                f.WriteLine("-");
+            }
+        }
+
+        public void dump_news_info(StreamWriter f, string link, List<ArticleCriteria> articleList, double mark)
+        {
+            try
+            {
+                string info_line = string.Format("{0}\t{1}\t{2}\t{3}\n", link, articleList.Count.ToString(), articleList.Max(a => a.Date), mark);
+                f.WriteLine(info_line);
+                foreach (var article in articleList)
+                {
+                    info_line = string.Format("{0}\t{1}\t{2}\t{3}\n", article.Date.ToString("u"), article.Faculty, (article.PageNumber).ToString(), article.Link);
+                    f.WriteLine(info_line);
+                }
+            }
+            catch (Exception e)
+            {
+                f.WriteLine("-");
             }
         }
 
@@ -151,6 +176,7 @@ namespace NetProject__UNIVERSITY_.Models
 
         public void MainFunction(DateTime fromDate)
         {
+
             // посиланння на розділи "Новини" різних факультетів
             string filenameRead = @"Data\link_list.txt";
 
@@ -160,11 +186,14 @@ namespace NetProject__UNIVERSITY_.Models
 
             using (StreamWriter f = new StreamWriter(filenameWrite, false))
             {
+
                 f.WriteLine(string.Format("ФАКУЛЬТЕТ \t КІЛЬКІСТЬ НОВИН ВІД {0} \t ДАТА ОСТАННЬОЇ ПУБЛІКАЦІЇ", fromDate.Date.ToString("dd.MM.yyyy")));
                 foreach (string link in links)
                 {
                     List<ArticleCriteria> articleList = CollectNewsInfo(link, fromDate);
-                    dump_news_info(f, link, articleList);
+                    ArticleMark articleMark = new ArticleMark(link, articleList);
+                    double mark = articleMark.CalculateFacultyMark(link, articleList);
+                    dump_news_info(f, link, articleList, mark);
                 }
             }
 
