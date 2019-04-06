@@ -117,5 +117,14 @@ namespace NetProject__UNIVERSITY_.Models
         }
 
 
+        
+         //function:  Get all news from the filter v1.2
+        public static HtmlNodeCollection ExtractArticles(HtmlNode article, string articleAttribute)
+        {
+            string article_link = "//article";
+          // bioweb.lnu.edu.ua/news/category/novyny-kafedry-zoolohiji          
+            var articleNodes = article.SelectNodes(articleAttribute + article_link);         
+            return articleNodes;
+        }
     }
 }
