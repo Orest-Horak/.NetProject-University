@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Collections;
@@ -197,41 +196,8 @@ namespace NetProject__UNIVERSITY_.Models
                     dump_news_info(f, link, articleList, mark);
                 }
             }
-        }
-        
-        public void MainFunction2()
-        {
 
 
-            // First try write data in excel
-
-            using (ExcelPackage excel = new ExcelPackage())
-            {
-                excel.Workbook.Worksheets.Add("Worksheet1");
-                excel.Workbook.Worksheets.Add("Worksheet2");
-                excel.Workbook.Worksheets.Add("Worksheet3");
-
-                var headerRow = new List<string[]>()
-                {
-                    new string[] { "ID", "First Name", "Last Name", "DOB" }
-                };
-
-                // Determine the header range (e.g. A1:D1)
-                string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
-
-                // Target a worksheet
-                var worksheet = excel.Workbook.Worksheets["Worksheet1"];
-
-                // Popular header row data
-                worksheet.Cells[headerRange].LoadFromArrays(headerRow);
-                worksheet.Cells[2, 2].Value = "DGSGSDGSG";
-
-               FileInfo excelFile = new FileInfo(@"D:\3 курс 2 сем\Dot NET\Project\.NetProject-University-master\NetProject( UNIVERSITY)\Excels\Test.xlsx");
-                
-                excel.SaveAs(excelFile);
-            }
         }
     }
 }
-
-
