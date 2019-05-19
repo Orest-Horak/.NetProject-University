@@ -1,0 +1,36 @@
+﻿@model NetProject__UNIVERSITY_.Models.Log_in
+
+@{
+    ViewData["Title"] = "Login_page";
+}
+
+<h2 style="color:blue">Please Log in</h2>
+
+<body style="background-image:url('/images/5.jpg');">
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login_page">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label" style="color:crimson;font-size:25px;">Login</label>
+                <input asp-for="Login" class="form-control"/>
+                <span asp-validation-for="Login" class="text-danger" ></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label" style="color:crimson;font-size:25px;">Password</label>
+                <input asp-for="Password" class="form-control"  />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group" >
+                <input type="submit" value="Log in" class="btn btn-default" style="color:crimson;font-size:25px;background-color:azure" />
+            </div>
+        </form>
+    </div>
+</div>
+   </body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

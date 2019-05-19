@@ -1,0 +1,60 @@
+﻿@model NetProject__UNIVERSITY_.Models.Registration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h2 style="color:blue">Registration</h2>
+
+<body style="background-image:url('/images/5.jpg');">
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Sender">
+                <div asp-validation-summary="ModelOnly" class="text-danger" style="color:crimson;font-size:16px;"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label" style="color:crimson;font-size:16px;">First name</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label" style="color:crimson;font-size:16px;">Last name</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateOfBirth" class="control-label" style="color:crimson;font-size:16px;">Date of birth</label>
+                    <input asp-for="DateOfBirth" class="form-control" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label" style="color:crimson;font-size:16px;">Phone number</label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label" style="color:crimson;font-size:16px;">E-mail</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"  style="color:crimson;font-size:16px;">Password</label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" style="color:crimson;font-size:23px;background-color:azure" />
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
