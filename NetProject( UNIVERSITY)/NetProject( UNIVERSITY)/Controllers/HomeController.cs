@@ -38,7 +38,7 @@ namespace NetProject__UNIVERSITY_.Controllers
         //    ArticleCriteria test = new ArticleCriteria(null, 0, "");
         //    test.MainFunction(DateTime.Parse("01.01.2019", CultureInfo.CreateSpecificCulture("fr-FR")));
             
-            return View();
+            return View("Index");
         }
       //  [Authorize(Roles = "Admin")]
         public IActionResult Details()
