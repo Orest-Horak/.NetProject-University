@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - NetProject__UNIVERSITY_</title>
+   <title>@ViewData["Title"] University rating system</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,15 +26,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">NetProject__UNIVERSITY_</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="font-size:20px"><img src="~/images/1.jpg" width="50" height="30"></a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="font-size:30px;color:crimson">University rating system</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" style="font-size:20px">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color:white">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Result" style="color:white">Result</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Details" style="color:white">Details</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color:white">Contact</a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    
+                    <li><a asp-area="" asp-controller="Home" asp-action="Registration" style="color:white">Registration</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Log_in" style="color:white">Log in</a></li>
                 </ul>
-            </div>
+            </div>          
         </div>
     </nav>
 
@@ -44,7 +55,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - NetProject__UNIVERSITY_</p>
+            <p>&copy; 2019 - University rating system</p>
         </footer>
     </div>
 
