@@ -1,0 +1,53 @@
+﻿@model NetProject__UNIVERSITY_.MarkingDate
+
+@{
+    ViewData["Title"] = "Rating";
+}
+
+<h2 style="color:blue">Rating</h2>
+
+<body style="background-image:url('/images/5.jpg');">
+    <style>
+        table#result tr {
+            background-color: white;
+            color: blue;
+            border-color: crimson;
+        }
+
+        table#result th {
+            background-color: black;
+            color: white;
+            border-color: crimson;
+        }
+
+        table, th, td {
+            font-size: 20px;
+            border: 2px solid crimson;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: right;
+        }
+    </style>
+
+
+    @if (Model == null)
+    {
+        <h3 style="color:blue">Initialize rating on @ViewBag.data</h3>
+        <form method="post" action="/Home/Rating" onsubmit="return validate(this)">
+            <table>
+                @Html.Hidden("Date", ViewBag.data, new { @id = "hfDate" })
+                <tr>
+                    <td><input type="submit" value="Start Rating" formnovalidate /> </td>
+                </tr>
+            </table>
+        </form>
+    }
+    @if (Model != null)
+    {
+        <h3 style="color:blue">Rating on @ViewBag.data was successfully completed! </h3>
+        @Html.ActionLink("Results", "Result", "Home")
+    }
+
+</body>

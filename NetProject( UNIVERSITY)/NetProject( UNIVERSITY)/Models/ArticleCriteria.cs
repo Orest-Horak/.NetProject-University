@@ -1,5 +1,4 @@
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Diagnostics;
@@ -8,12 +7,57 @@ using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Text;
+using NetProject__UNIVERSITY_.Models;
 
 namespace NetProject__UNIVERSITY_.Models
 {
+
+    public class Article
+    {
+        public DateTime Date { get; set; }
+        public string Link { get; set; }
+        public int PageNumber { get; set; }
+        public object Faculty { get; set; }
+
+        public Article()
+        {
+
+        }
+
+        public Article(HtmlNode articleRaw, int pageNumber, Faculties faculty)
+        {
+            this.Date = new DateTime();
+            this.Link = "no link";
+            this.PageNumber = pageNumber;
+            this.Faculty = faculty;
+            try
+            {
+                //semiworking         
+                //this.DateFormat = articleRaw.SelectSingleNode("//div[@class='meta']").InnerText.Remove(11).Trim();
+                //this.Date = DateTime.Parse(DateFormat);
+                //this.Link = articleRaw.Attributes["href"].Value.Trim();
+
+
+                //string[] stringDate = DateFormat.Split(new char[] { '.' });
+                //int day = Int32.Parse(stringDate[0]), month = Int32.Parse(stringDate[1]), year = Int32.Parse(stringDate[2]);
+                HtmlNode dataNode = articleRaw.ChildNodes["header"].ChildNodes["div"];             
+                this.Link = articleRaw.SelectSingleNode("div[@class='excerpt']//a[@class='read-more']").Attributes["href"].Value.Trim();
+                var DateFormat = dataNode.InnerText.Remove(11).Trim();
+                this.Date = DateTime.Parse(DateFormat);
+                //div[@class='excerpt']//a[@class='read-more']
+
+
+            }
+            catch (Exception e)
+            {
+                { };
+            }
+        }
+
+    }
+
     public class ArticleCriteria
     {
-        public string DateFormat { get; set; }
         public DateTime Date { get; set; }
         public string Link { get; set; }
         public int PageNumber { get; set; }
@@ -21,7 +65,6 @@ namespace NetProject__UNIVERSITY_.Models
 
         public ArticleCriteria(HtmlNode articleRaw, int pageNumber, string faculty)
         {
-            this.DateFormat = "??.??.????";
             this.Date = new DateTime();
             this.Link = "no link";
             this.PageNumber = pageNumber;
@@ -37,10 +80,9 @@ namespace NetProject__UNIVERSITY_.Models
                 //string[] stringDate = DateFormat.Split(new char[] { '.' });
                 //int day = Int32.Parse(stringDate[0]), month = Int32.Parse(stringDate[1]), year = Int32.Parse(stringDate[2]);
                 HtmlNode dataNode = articleRaw.ChildNodes["header"].ChildNodes["div"];
-                this.DateFormat = dataNode.InnerText.Remove(11).Trim();
-                this.Date = DateTime.Parse(DateFormat);
+                var DateFormat = dataNode.InnerText.Remove(11).Trim();
                 this.Link = articleRaw.SelectSingleNode("div[@class='excerpt']//a[@class='read-more']").Attributes["href"].Value.Trim();
-
+                this.Date = DateTime.Parse(DateFormat);             
                 //div[@class='excerpt']//a[@class='read-more']
 
 
@@ -197,41 +239,8 @@ namespace NetProject__UNIVERSITY_.Models
                     dump_news_info(f, link, articleList, mark);
                 }
             }
-        }
-        
-        public void MainFunction2()
-        {
 
 
-            // First try write data in excel
-
-            using (ExcelPackage excel = new ExcelPackage())
-            {
-                excel.Workbook.Worksheets.Add("Worksheet1");
-                excel.Workbook.Worksheets.Add("Worksheet2");
-                excel.Workbook.Worksheets.Add("Worksheet3");
-
-                var headerRow = new List<string[]>()
-                {
-                    new string[] { "ID", "First Name", "Last Name", "DOB" }
-                };
-
-                // Determine the header range (e.g. A1:D1)
-                string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
-
-                // Target a worksheet
-                var worksheet = excel.Workbook.Worksheets["Worksheet1"];
-
-                // Popular header row data
-                worksheet.Cells[headerRange].LoadFromArrays(headerRow);
-                worksheet.Cells[2, 2].Value = "DGSGSDGSG";
-
-               FileInfo excelFile = new FileInfo(@"D:\3 курс 2 сем\Dot NET\Project\.NetProject-University-master\NetProject( UNIVERSITY)\Excels\Test.xlsx");
-                
-                excel.SaveAs(excelFile);
-            }
         }
     }
 }
-
-
