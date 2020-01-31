@@ -1,0 +1,103 @@
+﻿@model IEnumerable<NetProject__UNIVERSITY_.Models.ResultElement>
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+<h2 style="color:blue">Results</h2>
+<body style="background-image:url('/images/5.jpg');">
+    <style>
+        table#result tr {
+            background-color: white;
+            color: blue;
+            border-color: crimson;
+        }
+
+        table#result th {
+            background-color: black;
+            color: white;
+            border-color: crimson;
+        }
+
+        table, th, td {
+            font-size: 20px;
+            border: 2px solid crimson;
+            border-collapse: collapse;
+        }
+        td{
+            text-align: right;
+        }
+       
+    </style>
+
+
+
+
+
+    <form method="post" action="/Home/Result" onsubmit="return validate(this)">
+        <table>
+            <tr>
+                <td><p>Введіть дату оцінювання :</p></td>
+                <td>
+                    @Html.DropDownList("DateId", new SelectList(ViewBag.data, "DateId", "Date"), "Please select", new { @id = "ddlDates" })
+                    @Html.Hidden("Date", new DateTime(), new { @id = "hfDate" })
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Отправить" formnovalidate /> </td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+    @if (Model != null && Model.Count() == 0)
+    {
+        <script>alert("Оберіть дату!")</script>
+    }
+    @if (Model != null && Model.Count() > 0)
+    {
+        <table id="mainResult">
+            <tr>
+                <th scope="col">Факультет</th>
+                @for (int i = 0; i < Model.First().CriteriaMarks.Count; i++)
+                {
+                    <th scope="col" colspan="2"> @Model.First().CriteriaMarks[i].Item1</th>
+                }
+            </tr>
+            @foreach (var result in Model)
+            {
+                <tr>
+                    <th rowspan="2"> @result.FacultyName</th>
+
+                    @foreach (var criteriaMark in result.CriteriaMarks)
+                    {
+                        <td>
+                            @criteriaMark.Item2.Ukr
+                        </td>
+                        <td rowspan="2">@criteriaMark.Item2.Sum</td>
+                    }
+                </tr>
+
+                <tr>
+                    @foreach (var criteriaMark in result.CriteriaMarks)
+                    {
+                        <td>
+                            @criteriaMark.Item2.Eng
+                        </td>
+                    }
+                </tr>
+
+            }
+
+        </table>
+
+    }
+
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $("body").on("change", "#ddlDates", function () {
+        $("#hfDate").val($(this).find("option:selected").text());
+    });
+</script>

@@ -1,0 +1,157 @@
+﻿@model NetProject__UNIVERSITY_.MarkingDate
+@{
+    ViewData["Title"] = "Загальні деталі оцінювання";
+    ViewData["Message"] = "All info about rating";
+}
+<h2 style="color:blue; margin-top:100px">@ViewData["Title"]</h2>
+<h3 style="color:coral">@ViewData["Message"]</h3>
+<body style="background-image:url('/images/5.jpg');">
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+
+    @if (Model == null || Model.DateId == 0)
+    {
+        <form method="post" action="/Home/Details" onsubmit="return validate(this)" name="date">
+            <table>
+                <tr>
+                    <td><p>Введіть дату оцінювання :</p></td>
+                    <td>
+                        @Html.DropDownList("DateId", new SelectList(ViewBag.data, "DateId", "Date"), "Please select", new { @id = "ddlDates" })
+                        @Html.Hidden("Date", new DateTime(), new { @id = "hfDate" })
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Отправить" formnovalidate /> </td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </form>
+    }
+
+    @if (Model != null && Model.DateId == 0)
+    {
+        <script>alert("Оберіть дату!")</script>
+    }
+
+    @if (Model != null && Model.DateId != 0)
+    {
+        <p>Деталі оцінювання новин факультетів (окремо) @Model.Date</p>
+        @Html.ActionLink("FacultyNewsbyFaculties", "GetFacultyNewsbyFaculties", "Home", Model);
+        <p>Деталі оцінювання новин факультетів (всі) @Model.Date</p>
+        @Html.ActionLink("FacultyNewsall", "GetFacultyNewsall", "Home", Model);
+        <p>Деталі оцінювання новин кафедр (окремо) @Model.Date</p>
+        @Html.ActionLink("DepartmentNewsbyFaculties", "GetDepartmentNewsbyFaculties", "Home", Model);
+        <p>Деталі оцінювання новин кафедр (всі) @Model.Date</p>
+        @Html.ActionLink("DepartmentNewsall", "GetDepartmentNewsall", "Home", Model);
+        <p>Деталі оцінювання викладачів (окремо) @Model.Date</p>
+        @Html.ActionLink("LecturersbyFaculties", "GetLecturersbyFaculties", "Home", Model);
+        @*<p>Деталі оцінювання викладачів (всі) @Model.Date</p>
+            @Html.ActionLink("Lecturersall", "GetLecturersall", "Home", Model);*@
+        <p>Деталі оцінювання методичних матеріалів (окремо) @Model.Date</p>
+        @Html.ActionLink("MaterialsbyFaculties", "GetMaterialsbyFaculties", "Home", Model);
+        <p>Деталі оцінювання курсів (окремо) @Model.Date</p>
+        @Html.ActionLink("CoursesbyFaculties", "GetCoursesbyFaculties", "Home", Model);
+    }
+    @*<script>
+            document.getElementById["date"].
+        @Html.ActionLink("", "GetFacultyNews", "Home",);
+        </script>*@
+
+    @*@using (Html.BeginForm("GetFacultyNews", "Home"))
+        {
+            @Html.TextBox("Name")
+            <input type="submit" value="Edit"  />
+        }*@
+
+    @*@if (Model != null && Model.Count() == 0)
+        {
+            <script>alert("Оберіть дату!")</script>
+        }
+        @if (Model != null && Model.Count() > 0)
+        {
+            <table id="mainResult">
+                <tr>
+                    <th scope="col">Факультет</th>
+                    @for (int i = 0; i < Model.First().CriteriaMarks.Count; i++)
+                    {
+                        <th scope="col" colspan="2"> @Model.First().CriteriaMarks[i].Item1</th>
+                    }
+                </tr>
+                @foreach (var result in Model)
+                {
+                    <tr>
+                        <th rowspan="2"> @result.FacultyName</th>
+
+                        @foreach (var criteriaMark in result.CriteriaMarks)
+                        {
+                            <td>
+                                @criteriaMark.Item2.Ukr
+                            </td>
+                            <td rowspan="2">@criteriaMark.Item2.Sum</td>
+                        }
+                    </tr>
+
+                    <tr>
+                        @foreach (var criteriaMark in result.CriteriaMarks)
+                        {
+                            <td>
+                                @criteriaMark.Item2.Eng
+                            </td>
+                        }
+                    </tr>
+
+                }
+
+            </table>
+
+        }*@
+
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $("body").on("change", "#ddlDates", function () {
+        $("#hfDate").val($(this).find("option:selected").text());
+    });
+</script>
